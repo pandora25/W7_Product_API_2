@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<h3>Search for A Car</h3>
+<br />
+
+<form action="/Home/GetCarMake" method="get">
+        Search by Make:<input type="text" Name="make" />
+        <input type="submit" value="Submit" />
+    </form>
+@*Search By Make <input id="make" name="make" type="text" />
+<input type="button" id="searchButton" value="Search" /><hr />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#make").keyup(function () {
+            $.ajax({
+                type: "POST",
+                url: "/Home/GetCarMake",
+                data: '{make:"' + $("#make").val() + '"}',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+
+                    $("#searchResults").html("");// clear the table
+                    for (var i = 0; i < response.length; i++) {
+                        var cars = response[i];// get Customer at index i
+                        var Tr = "<tr>";
+                        var Td1 = "<td>" +  "</td>";
+                        var Td2 = "<td>" + Customer.CompanyName + "</td>";
+
+                        $("#searchResults").append(Tr + Td1 + Td2 + "</tr>");
+
+                    }
+
+                },
+                failure: function (response) {
+                    alert(response.responseText);
+                }
+            });
+        });
+    });
+</script>
+
+<table id="searchResults" class="table"></table>*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+<form action="/Home/GetCarModel" method="get">
+    Search by Model:<input type="text" Name="model" />
+    <input type="submit" value="Submit" />
+</form>
+<hr />
+<form action="/Home/GetCarYear" method="get">
+    Search by Year:<input type="text" Name="year" />
+    <input type="submit" value="Submit" />
+</form>
+<hr />
+<form action="/Home/GetCarColor" method="get">
+    Search by Color:<input type="text" Name="color" />
+    <input type="submit" value="Submit" />
+</form>
+<hr />
+

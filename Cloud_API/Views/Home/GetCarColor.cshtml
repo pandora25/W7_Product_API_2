@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "GetCarColor";
+}
+
+<h2>Get Car Color</h2>
+
+<hr />
+<table class="table">
+    <tr>
+        <th>Color</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Price</th>
+    </tr>
+
+    @for (int i = 0; i < ViewBag.ShowingColor.Count; i++)
+    {
+        <tr>
+            <td>
+                @ViewBag.ShowingColor[i]["Color"]
+            </td>
+            <td>
+                @ViewBag.ShowingColor[i]["Make"]
+            </td>
+            <td>
+                @ViewBag.ShowingColor[i]["Model"]
+            </td>
+            <td>
+                @ViewBag.ShowingColor[i]["Year"]
+            </td>
+            <td>
+                @ViewBag.ShowingColor[i]["Price"]
+            </td>
+        </tr>
+    }
+</table>

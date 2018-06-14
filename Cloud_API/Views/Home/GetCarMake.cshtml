@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "GetCarMake";
+}
+
+<h2>Get Car Make</h2>
+
+
+<hr />
+<table class="table">
+    <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Color</th>
+        <th>Price</th>
+    </tr>
+
+    @for (int i = 0; i < ViewBag.ShowingMake.Count; i++)
+    {
+        <tr>
+            <td>
+                @ViewBag.ShowingMake[i]["Make"]
+            </td>
+            <td>
+                @ViewBag.ShowingMake[i]["Model"]
+            </td>
+            <td>
+                @ViewBag.ShowingMake[i]["Year"]
+            </td>
+            <td>
+                @ViewBag.ShowingMake[i]["Color"]
+            </td>
+            <td>
+                @ViewBag.ShowingMake[i]["Price"]
+            </td>
+        </tr>
+    }
+</table>
